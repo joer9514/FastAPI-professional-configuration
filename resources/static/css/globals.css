@@ -1,0 +1,9 @@
+.container {
+    min-height: 100dvh;
+    max-width: 100dvw;
+    text-align: center;
+
+    .title {
+        color: #009485;
+    }
+}

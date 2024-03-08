@@ -1,0 +1,11 @@
+[project]
+name = "FastAPI-professional-configuration"
+description = """
+
+"""
+version = "0.0.0"
+license = "MIT"
+keywords = ["boilerplate", "template", "skeleton", "project"]
+authors = [
+    { name = "Jose Espinosa", email = "joer9514@gmail.com" },
+]
