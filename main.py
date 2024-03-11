@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Entry point file for the FastAPI application.
 
