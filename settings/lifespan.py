@@ -13,7 +13,7 @@ from settings.database import start_database
 
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):  # pylint: disable=unused-argument
+async def lifespan(app: FastAPI):
     """
     A context manager for managing the application's lifespan.
 

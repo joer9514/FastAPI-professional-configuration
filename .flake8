@@ -1,0 +1,14 @@
+[flake8]
+max-line-length = 87
+
+exclude =
+    .git,
+    .venv/,
+    metadata/
+    */__pycache__
+
+
+ignore=
+
+per-file-ignores =
+    */__init__.py:F401
