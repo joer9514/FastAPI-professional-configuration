@@ -5,17 +5,18 @@ This module contains functions for initializing the database schema using SQLMod
 """
 
 from sqlalchemy.exc import SQLAlchemyError
-from sqlmodel import SQLModel, create_engine
+from sqlalchemy.ext.asyncio import create_async_engine
+from sqlmodel import SQLModel
 
 from settings.project import DATABASE_URL
 
-engine = create_engine(DATABASE_URL, echo=True)
+async_engine = create_async_engine(DATABASE_URL, echo=True)
 
 
-def start_database():
+async def start_database():
     """Initialize the database schemas"""
     try:
-        SQLModel.metadata.create_all(engine)
-        print("\n\t\t\tDatabase initialized successfully.\n")
+        async with async_engine.begin() as conn:
+            await conn.run_sync(SQLModel.metadata.create_all)
     except SQLAlchemyError as e:
         print("Error initializing database:", str(e))

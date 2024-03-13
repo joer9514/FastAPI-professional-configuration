@@ -24,7 +24,7 @@ async def lifespan(app: FastAPI):
     - app (FastAPI): The FastAPI application instance.
     """
     # loading events at startup 🢃
-    start_database()
+    await start_database()
 
     yield
 
