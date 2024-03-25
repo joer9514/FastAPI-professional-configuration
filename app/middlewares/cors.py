@@ -5,12 +5,10 @@ This module provides functions and classes to manage CORS settings for the proje
 API endpoints. Allowing or restricting cross-origin requests based on specified rules.
 """
 
-from fastapi.middleware.cors import CORSMiddleware
-
 from settings.project import WHITELIST_OF_ORIGINS
 
 
-class CorsMiddleware:
+class CorsMiddlewareSetup:
     """Middleware for CORS management"""
 
     def __init__(self):
@@ -30,5 +28,4 @@ class CorsMiddleware:
         }
 
 
-CORSMiddlewareSetup = CORSMiddleware
-cors_config = CorsMiddleware().config
+CORSMiddlewareSetup = CorsMiddlewareSetup().config

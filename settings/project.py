@@ -17,6 +17,12 @@ load_dotenv(dotenv_path=dotenv_path, override=True)
 # CORS
 WHITELIST_OF_ORIGINS = getenv("FASTAPI_WHITELIST_OF_ORIGINS")
 
+# HOST Header Injection
+WHITELIST_OF_HOSTS = getenv("FASTAPI_WHITELIST_OF_HOSTS")
+
+# SERVER MODE (dev OR prod)
+SERVER_MODE = getenv("FASTAPI_SERVER_MODE") or "dev"
+
 # DATABASE
 DATABASE_ENGINE = getenv("FASTAPI_DATABASE_ENGINE")
 
